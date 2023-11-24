@@ -81,7 +81,7 @@
 					<span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
 						<i class="icon icon-xs me-2 bi bi-globe"></i>
 					</span>
-					<span>BIPSU Official</span>
+					<span>Laravel Training</span>
 				</a>
 			</li>
 		</ul>
