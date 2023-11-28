@@ -1,7 +1,13 @@
-## About LARAVEL-VOLT
+## About Contact Management System
 
-This boilerplate uses laravel php framework version 10 and volt bootstrap admin template.
+This boilerplate uses Laravel PHP Framework V10 and Volt Bootstrap Admin Template.
 
+
+## Features
+
+ - System Authentication
+ - Account Profile 
+ - Users Management
 
 ## Installation
 
@@ -15,7 +21,7 @@ This boilerplate uses laravel php framework version 10 and volt bootstrap admin 
 		DB_CONNECTION=mysql
 		DB_HOST=127.0.0.1
 		DB_PORT=3306
-		DB_DATABASE=
+		DB_DATABASE=contact_management_system_db
 		DB_USERNAME=root
 		DB_PASSWORD=
 	```
@@ -30,7 +36,7 @@ This boilerplate uses laravel php framework version 10 and volt bootstrap admin 
 ## How to Access using laragon
 
  - Reload laragon
- - Open chome and type the project-folder name example: `http://laravel-volt.test`
+ - Open chrome and type the project-folder name example: `http://contact-management-system.test`
 
 ## Default Login Credential
 
