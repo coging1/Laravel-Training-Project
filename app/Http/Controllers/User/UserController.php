@@ -7,9 +7,10 @@ use App\Http\Requests\User\StoreUserRequest;
 use App\Http\Requests\User\UpdateUserRequest;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Hash;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -40,7 +41,7 @@ class UserController extends Controller
 	/**
 	 * Store a newly created resource in storage.
 	 */
-	public function store(StoreUserRequest $request)
+	public function store(StoreUserRequest $request): RedirectResponse
 	{
 		// Retrieve the validated input...
 		$validated = $request->validated();
@@ -75,7 +76,7 @@ class UserController extends Controller
 	/**
 	 * Update the specified resource in storage.
 	 */
-	public function update(UpdateUserRequest $request, User $user)
+	public function update(UpdateUserRequest $request, User $user): RedirectResponse
 	{
 		// Retrieve the validated input...
 		$validated = $request->validated();
@@ -98,7 +99,7 @@ class UserController extends Controller
 	/**
 	 * Remove the specified resource from storage.
 	 */
-	public function destroy(User $user)
+	public function destroy(User $user): RedirectResponse
 	{
 		// delete User
 		$user->delete();
