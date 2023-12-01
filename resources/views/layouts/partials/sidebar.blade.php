@@ -13,16 +13,16 @@
 </nav>
 
 {{-- sidebar --}}
-<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+<nav id="sidebarMenu" class="sidebar d-lg-block text-white collapse" data-simplebar style="background-color: #759CB7;">
 	<div class="sidebar-inner px-4 pt-3">
 		<div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
 			<div class="d-flex align-items-center">
 				<div class="avatar-lg me-4">
-					<img src="{{ asset('img/team/profile-picture-3.jpg') }}" class="card-img-top rounded-circle border-white"
-						alt="Bonnie Green">
+					<img src="{{ asset('img/team/user-icon.jpg') }}" class="card-img-top rounded-circle border-white"
+						alt="User Profile Pic">
 				</div>
 				<div class="d-block">
-					<h2 class="h5 mb-3">Hi, Jane</h2>
+					<h2 class="h5 mb-3">Hello, User</h2>
 					{{-- Authentication --}}
 					<form method="POST" action="{{ route('logout') }}">
 						@csrf
@@ -43,17 +43,20 @@
 		</div>
 		<ul class="nav flex-column pt-3 pt-md-0">
 			<li class="nav-item">
-				<a href="{{ route('dashboard') }}" class="nav-link d-flex align-items-center">
+				<a href="{{ route('dashboard') }}">
 					<span class="sidebar-icon">
-						<img src="{{ asset('img/brand/light.svg') }}" height="20" width="20" alt="Volt Logo">
+						<img src="{{ asset('img/brand/light.svg') }}" height="50" width="50" alt="Volt Logo">
 					</span>
-					<span class="mt-1 ms-1 sidebar-text">CMS</span>
+					<span class="mt-1 ms-1 sidebar-text">Contact MS</span>
 				</a>
 			</li>
+
+      <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+
 			<li class="nav-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
 				<a href="{{ route('dashboard') }}" class="nav-link">
 					<span class="sidebar-icon">
-						<i class="icon icon-xs me-2 bi bi-speedometer"></i>
+						<i class="icon icon-xs me-2 bi bi-ui-checks-grid" style="color:white;"></i>
 					</span>
 					<span class="sidebar-text">Dashboard</span>
 				</a>
@@ -61,23 +64,41 @@
 			<li class="nav-item {{ request()->routeIs('users.*') ? 'active' : '' }}">
 				<a href="{{ route('users.index') }}" class="nav-link">
 					<span class="sidebar-icon">
-						<i class="icon icon-xs me-2  bi bi-person-bounding-box"></i>
+						<i class="icon icon-xs me-2  bi bi-person-circle" style="color:white;"></i>
 					</span>
-					<span class="sidebar-text">Users Management</span>
+					<span class="sidebar-text">Users</span>
 				</a>
 			</li>
+			<li class="nav-item {{ request()->routeIs('contacts.*') ? 'active' : '' }}">
+				<a href="{{ route('contacts.index') }}" class="nav-link">
+					<span class="sidebar-icon">
+						<i class="icon icon-xs me-2  bi bi-person-lines-fill" style="color:white;"></i>
+					</span>
+					<span class="sidebar-text">Contacts</span>
+				</a>
+			</li>
+      <li class="nav-item {{ request()->routeIs('categories.*') ? 'active' : '' }}">
+				<a href="{{ route('categories.index') }}" class="nav-link">
+					<span class="sidebar-icon">
+						<i class="icon icon-xs me-2  bi bi-list" style="color:white;"></i>
+					</span>
+					<span class="sidebar-text">Categories</span>
+				</a>
+			</li>
+
 			<li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+
 			<li class="nav-item">
 				<a href="{{ url('/') }}" class="nav-link d-flex align-items-center">
 					<span class="sidebar-icon">
-						<i class="icon icon-xs me-2 bi bi-house"></i>
+						<i class="icon icon-xs me-2 bi bi-house" style="color:white;"></i>
 					</span>
-					<span class="sidebar-text">Homepage</span>
+					<span class="sidebar-text">Home Page</span>
 				</a>
 			</li>
 			<li class="nav-item">
-				<a target="_blank" href="#"
-					class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro">
+				<a target="_blank" href="https://www.inventivemedia.com.ph/laravel-training-philippines-php-web-development/"
+					class="btn btn-secondary d-flex align-items-center justify-content-center btn-upgrade-pro" style="background-color: #fcb814;">
 					<span class="sidebar-icon d-inline-flex align-items-center justify-content-center">
 						<i class="icon icon-xs me-2 bi bi-globe"></i>
 					</span>

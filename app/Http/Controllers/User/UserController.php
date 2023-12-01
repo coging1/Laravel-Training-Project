@@ -19,7 +19,6 @@ class UserController extends Controller
 	 */
 	public function index(Request $request): View
 	{
-
 		// search input
 		$searchVal = $request->search ?? null;
 

@@ -15,14 +15,14 @@
 								</svg>
 							</div>
 							<div class="d-sm-none">
-								<h2 class="h5">Users</h2>
-								<h3 class="fw-extrabold mb-1">345,678</h3>
+								<h2 class="h5"> Total Users</h2>
+								<h3 class="fw-extrabold mb-1">{{ $usersCount }}</h3>
 							</div>
 						</div>
 						<div class="col-12 col-xl-7 px-xl-0">
 							<div class="d-none d-sm-block">
-								<h2 class="h6 text-gray-400 mb-0">Users</h2>
-								<h3 class="fw-extrabold mb-2">345k</h3>
+								<h2 class="h6 text-gray-400 mb-0"> Total Users</h2>
+								<h3 class="fw-extrabold mb-2">{{ $usersCount }}</h3>
 							</div>
 						</div>
 					</div>
@@ -43,14 +43,14 @@
 								</svg>
 							</div>
 							<div class="d-sm-none">
-								<h2 class="fw-extrabold h5">Revenue</h2>
-								<h3 class="mb-1">$43,594</h3>
+								<h2 class="fw-extrabold h5"> Total Contacts</h2>
+								<h3 class="mb-1">{{ $contactsCount }}</h3>
 							</div>
 						</div>
 						<div class="col-12 col-xl-7 px-xl-0">
 							<div class="d-none d-sm-block">
-								<h2 class="h6 text-gray-400 mb-0">Revenue</h2>
-								<h3 class="fw-extrabold mb-2">$43,594</h3>
+								<h2 class="h6 text-gray-400 mb-0"> Total Contacts</h2>
+								<h3 class="fw-extrabold mb-2">{{ $contactsCount }}</h3>
 							</div>
 						</div>
 					</div>
@@ -71,14 +71,14 @@
 								</svg>
 							</div>
 							<div class="d-sm-none">
-								<h2 class="fw-extrabold h5"> Bounce Rate</h2>
-								<h3 class="mb-1">50.88%</h3>
+								<h2 class="fw-extrabold h5"> All Categories</h2>
+								<h3 class="mb-1">{{ $categoriesCount }}</h3>
 							</div>
 						</div>
 						<div class="col-12 col-xl-7 px-xl-0">
 							<div class="d-none d-sm-block">
-								<h2 class="h6 text-gray-400 mb-0"> Bounce Rate</h2>
-								<h3 class="fw-extrabold mb-2">50.88%</h3>
+								<h2 class="h6 text-gray-400 mb-0"> All Categories</h2>
+								<h3 class="fw-extrabold mb-2">{{ $categoriesCount }}</h3>
 							</div>
 						</div>
 					</div>

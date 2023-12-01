@@ -2,8 +2,17 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\PasswordController;
+
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Contact\ContactController;
+use App\Http\Controllers\Category\CategoryController;
+
+use App\Models\User;
+use App\Models\Contact\Contact;
+use App\Models\Category\Category;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,10 +30,6 @@ Route::get('/', function () {
 	return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-	return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
 
 	// profile
@@ -32,8 +37,17 @@ Route::middleware('auth')->group(function () {
 	Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 	Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+  // dashboard
+  Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 	// users
 	Route::resource('users', UserController::class);
+
+	// contacts
+	Route::resource('contacts', ContactController::class);
+
+  // categories
+	Route::resource('categories', CategoryController::class);
 
 });
 
